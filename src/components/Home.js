@@ -4,11 +4,11 @@ const Home = () => {
   return (
     <div style={{ margin: "1rem" }}>
       <h1 className="text-center" style={{ fontSize: "56px" }}>
-        The Breaking Bad Mania.
+        The Breaking Bad Hub.
       </h1>
       <p>
-        A Single Page web application where viewers can view all the characters of
-        Breaking Bad franchise shows and movies.
+        A Single Page web application where viewers can view all the characters
+        of Breaking Bad franchise shows and movies.
       </p>
       <h2>Features:</h2>
       <p>List all the Characters with its Name.</p>
