@@ -14,12 +14,13 @@ const App = () => {
   }, []);
   return (
     <div>
-      <nav>
+      <nav className="navbar">
         <Link to="/">Home</Link>
         <Link to="/characters" state={characters}>
           Characters
         </Link>
       </nav>
+
       <Outlet />
     </div>
   );

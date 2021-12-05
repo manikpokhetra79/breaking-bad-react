@@ -6,12 +6,14 @@ import List from "./components/List";
 import Card from "./components/Card";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
+import Home from "./components/Home";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Routes>
         <Route path="/" element={<App />}>
+          <Route index element={<Home />} />
           <Route path="characters" element={<List />}></Route>
           <Route path="character" element={<Card />}></Route>
         </Route>
