@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import { Page404, Home, List, Card } from "./components";
 ReactDOM.render(
@@ -12,7 +12,7 @@ ReactDOM.render(
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
           <Route path="characters" element={<List />}></Route>
-          <Route path="character" element={<Card />}></Route>
+          <Route path="character/:name" element={<Card />}></Route>
         </Route>
         <Route path="*" element={<Page404 />} />
       </Routes>
