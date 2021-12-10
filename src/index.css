@@ -13,6 +13,9 @@ code {
     monospace;
 }
 /* utility classes */
+.mt-3 {
+  margin-top: 3rem;
+}
 .d-flex {
   display: flex;
 }

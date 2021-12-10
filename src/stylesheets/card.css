@@ -25,7 +25,7 @@
   flex-flow: column wrap;
 }
 @media screen and (max-width: 592px) {
-  .right-container{
+  .right-container {
     font-size: 14px;
   }
   .img-container {
@@ -42,4 +42,10 @@
   margin: 2rem;
   cursor: pointer;
   font-size: 16px;
+}
+/* loader */
+.loader {
+  position: relative;
+  top: 30vh;
+  left: 40vw;
 }

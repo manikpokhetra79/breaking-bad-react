@@ -2,12 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import List from "./components/List";
-import Card from "./components/Card";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
-import Home from "./components/Home";
-
+import { Page404, Home, List, Card } from "./components";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -17,6 +14,7 @@ ReactDOM.render(
           <Route path="characters" element={<List />}></Route>
           <Route path="character" element={<Card />}></Route>
         </Route>
+        <Route path="*" element={<Page404 />} />
       </Routes>
     </Router>
   </React.StrictMode>,

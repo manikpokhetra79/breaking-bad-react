@@ -19,32 +19,32 @@ const Card = () => {
       <div className="character-card">
         <div className="left-container">
           <div className="img-container">
-            <img src={character.img} alt="character-pic" />
+            <img src={character?.img} alt="character-pic" />
           </div>
         </div>
         <div className="right-container">
           <p>
             <b>Character name : </b>
-            {character.name}
+            {character?.name}
           </p>
           <p>
-            <b>Birthdate:</b> {character.birthday}
+            <b>Birthdate:</b> {character?.birthday}
           </p>
           <p>
             <b>Occupation : &nbsp;</b>
-            {character.occupation.map((occupation, index) => (
+            {character?.occupation.map((occupation, index) => (
               <span key={index}>{(index ? ", " : "") + occupation}</span>
             ))}
           </p>
           <p>
-            <b>Status :</b> {character.status}
+            <b>Status :</b> {character?.status}
           </p>
           <p>
             <b>Nickname : </b>
-            {character.nickname}
+            {character?.nickname}
           </p>
           <p>
-            <b>Portrayed by :</b> {character.portrayed}
+            <b>Portrayed by :</b> {character?.portrayed}
           </p>
         </div>
       </div>
