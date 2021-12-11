@@ -3,13 +3,13 @@
   justify-content: space-evenly;
   margin-top: 2rem;
   background-color: #3b3b3b;
-  padding: 2rem;
+  padding: 2.5rem;
   font-family: "Courier New", Courier, monospace;
   font-size: 16px;
   font-weight: 500;
 }
 .img-container {
-  height: 500px;
+  height: 450px;
   width: 300px;
   border-radius: 5px;
 }
@@ -36,11 +36,15 @@
   background-color: #555555; /* Green */
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  cursor: pointer;
+}
+.back-btn:hover {
+  background-color: #3d3c3c;
 }
 /* loader */
 .loader {
@@ -96,7 +100,7 @@
     display: flex;
     color: #fff;
     flex-flow: column wrap;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 1023px) {

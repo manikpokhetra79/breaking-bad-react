@@ -27,7 +27,7 @@ const List = () => {
   };
   return (
     <ErrorBoundary>
-      <main>
+      <main className="main-body">
         {loading ? (
           <div className="loader">
             <ReactLoading
