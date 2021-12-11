@@ -3,7 +3,7 @@ import React from "react";
 const Home = () => {
   return (
     <div style={{ margin: "1rem" }}>
-      <h1 className="text-center" style={{ fontSize: "56px" }}>
+      <h1 className="text-center" style={{ fontSize: "40px" }}>
         The Breaking Bad Hub.
       </h1>
       <p>

@@ -23,10 +23,16 @@ code {
   text-align: center;
 }
 /* navbar */
+nav{
+  display: flex;
+  align-items: center;
+}
 .navbar {
   background-color: #fff;
   color: #fff;
-  padding: 2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 .navbar a {
   text-decoration: none;
@@ -46,7 +52,8 @@ code {
 .main-list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
+  margin-bottom: 5rem;
 }
 /* character style css */
 .card {
@@ -57,24 +64,7 @@ code {
   margin: 1rem;
   height: 500px;
 }
-@media screen and (max-width: 1072px) {
-  .card {
-    width: 25%;
-  }
-}
-@media screen and (max-width: 772px) {
-  .card {
-    width: 40%;
-  }
-}
-@media screen and (max-width: 572px) {
-  .card {
-    height: 300px;
-  }
-  .char-name {
-    font-size: 14px;
-  }
-}
+
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(61, 56, 56, 0.2);
 }
@@ -96,4 +86,71 @@ code {
   width: 100%;
   height: 100%;
   border-radius: 5px 5px 0 0;
+}
+/* media queries */
+@media screen and (max-width: 375px) {
+  .navbar {
+    padding: 1rem;
+  }
+  .navbar a {
+    font-size: 14px;
+  }
+  .main-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    width: 70%;
+    border-radius: 5px;
+    margin: 3.5rem 0;
+    height: 350px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 575px) {
+  .navbar {
+    padding: 1rem;
+  }
+  .main-list {
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    width: 40%;
+    height: 350px;
+    margin: 2rem 1rem;
+  }
+  .card h3 {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 1023px) {
+  .navbar {
+    padding: 1rem;
+  }
+  .main-list {
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .card {
+    width: 25%;
+    height: 350px;
+    margin: 2rem 5px;
+  }
+  .card h3 {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  .main-list {
+    justify-content: space-evenly;
+  }
+  .card {
+    width: 25%;
+    height: 450px;
+    margin: 2rem 5px;
+  }
+  .card h3 {
+    font-size: 16px;
+  }
 }

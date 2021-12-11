@@ -1,27 +1,28 @@
-import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "../stylesheets/card.css";
 import ErrorBoundary from "./ErrorBoundary";
 import ReactLoading from "react-loading";
 const Card = () => {
   const location = useLocation();
-  const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const { character } = location.state;
-  const goBack = () => {
-    navigate(-1);
-  };
-  setTimeout(() => {
-    setLoading(false);
-  }, 2000);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => {
+      setLoading(true);
+    };
+  }, [setLoading]);
 
   return (
     <>
       <ErrorBoundary>
-        <button onClick={goBack} className="back-btn">
-          Go Back
-        </button>
-        <h2 className="text-center">{character?.name} Bio </h2>
+        <div className="bio-header">
+          {" "}
+          <h2 className="text-center">{character?.name} Bio </h2>{" "}
+        </div>
         {loading ? (
           <div className="loader top20">
             <ReactLoading
